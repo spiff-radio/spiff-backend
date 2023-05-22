@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "playlists",
+  "info": {
+    "singularName": "playlist",
+    "pluralName": "playlists",
+    "displayName": "Static Playlists",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tracks": {
+      "type": "json"
+    },
+    "import_url": {
+      "type": "string"
+    },
+    "import_settings": {
+      "type": "json"
+    },
+    "private": {
+      "type": "boolean",
+      "default": false
+    },
+    "import_active": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
