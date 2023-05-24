@@ -3,7 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "Spiff Database",
-  "keywords": ["strapi"],
+  "keywords": [
+    "strapi"
+  ],
   "author": {
     "name": "Spiff Radio"
   },
@@ -26,7 +28,8 @@
     "@strapi/plugin-i18n": "4.10.5",
     "@strapi/plugin-users-permissions": "4.10.5",
     "@strapi/strapi": "4.10.5",
-    "better-sqlite3": "8.4.0"
+    "better-sqlite3": "8.4.0",
+    "spiff-strapi-api-plugin": "file:../spiff-strapi-api-plugin"
   },
   "strapi": {
     "uuid": "69def894-7ee8-4c0f-8ece-ccc5d5a7e065"
