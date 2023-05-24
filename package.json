@@ -1,8 +1,21 @@
 {
   "name": "spiff-database",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Spiff Database",
+  "keywords": ["strapi"],
+  "author": {
+    "name": "Spiff Radio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiff-radio/spiff-database.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spiff-radio/spiff-database/issues"
+  },
+  "homepage": "https://github.com/spiff-radio/spiff-database#readme",
+  "license": "MIT",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -15,15 +28,11 @@
     "@strapi/strapi": "4.10.5",
     "better-sqlite3": "8.4.0"
   },
-  "author": {
-    "name": "Spiff Radio"
-  },
   "strapi": {
     "uuid": "69def894-7ee8-4c0f-8ece-ccc5d5a7e065"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  }
 }
