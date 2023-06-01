@@ -4,7 +4,7 @@
   "info": {
     "singularName": "playlist",
     "pluralName": "playlists",
-    "displayName": "Static Playlists",
+    "displayName": "Playlists",
     "description": ""
   },
   "options": {
@@ -45,6 +45,27 @@
     "import_active": {
       "type": "boolean",
       "default": false
+    },
+    "wp_id": {
+      "type": "integer"
+    },
+    "wp_status": {
+      "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "playlists"
+    },
+    "track_count": {
+      "type": "integer"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "playlist"
     }
   }
 }

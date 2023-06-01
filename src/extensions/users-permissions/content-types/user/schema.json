@@ -75,6 +75,15 @@
     },
     "lastfm": {
       "type": "json"
+    },
+    "wp_id": {
+      "type": "integer"
+    },
+    "playlists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::playlist.playlist",
+      "mappedBy": "author"
     }
   }
 }

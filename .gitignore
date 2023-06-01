@@ -118,3 +118,5 @@ build
 # Spiff
 ############################
 src/plugins/spiff-api
+public/images/importers
+backups
