@@ -22,7 +22,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "build-importer-assets": "node build-importers-assets.mjs"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.10.6",
