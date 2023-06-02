@@ -66,6 +66,12 @@
       "relation": "oneToMany",
       "target": "api::tag.tag",
       "mappedBy": "playlist"
+    },
+    "favoriters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "favoritePlaylists"
     }
   }
 }

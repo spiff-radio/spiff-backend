@@ -84,6 +84,12 @@
       "relation": "oneToMany",
       "target": "api::playlist.playlist",
       "mappedBy": "author"
+    },
+    "favoritePlaylists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::playlist.playlist",
+      "mappedBy": "favoriters"
     }
   }
 }
