@@ -33,13 +33,23 @@
           apiRoutes
             .filter(route => route.handler === 'user.find')
             .map(route => {
-              console.log(route)
               route.config.middlewares = [
                 ...(route.config.middlewares || []),
                 'plugin::spiff-api.user-find'//middleware name
               ];
               return route;
             });
+
+            //add middleware for PUT /users/:id
+            apiRoutes
+              .filter(route => route.handler === 'user.update')
+              .map(route => {
+                route.config.middlewares = [
+                  ...(route.config.middlewares || []),
+                  'plugin::spiff-api.user-update'
+                ];
+                return route;
+              });
 
           return plugin;
 
