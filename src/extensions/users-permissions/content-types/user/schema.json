@@ -73,9 +73,6 @@
         "audios"
       ]
     },
-    "lastfm": {
-      "type": "json"
-    },
     "wp_id": {
       "type": "integer"
     },
@@ -97,6 +94,33 @@
       "target": "api::playlist.playlist"
     },
     "public": {
+      "type": "boolean",
+      "default": true
+    },
+    "usersFollowed": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "usersFollowing"
+    },
+    "usersFollowing": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "usersFollowed"
+    },
+    "lastfm_session": {
+      "type": "string",
+      "private": true
+    },
+    "lastfm_username": {
+      "type": "string"
+    },
+    "lastfm_scrobbler": {
+      "type": "boolean",
+      "default": true
+    },
+    "lastfm_favorite": {
       "type": "boolean",
       "default": true
     }

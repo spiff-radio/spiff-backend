@@ -19,9 +19,9 @@
     "title": {
       "type": "string"
     },
-    "playlist": {
+    "playlists": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::playlist.playlist",
       "inversedBy": "tags"
     }

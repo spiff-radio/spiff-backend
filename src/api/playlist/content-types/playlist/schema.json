@@ -8,8 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "populateCreatorFields": true
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -43,7 +42,7 @@
       "type": "boolean",
       "default": false
     },
-    "import_active": {
+    "synced": {
       "type": "boolean",
       "default": false
     },
@@ -64,9 +63,9 @@
     },
     "tags": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::tag.tag",
-      "mappedBy": "playlist"
+      "mappedBy": "playlists"
     },
     "favoriters": {
       "type": "relation",
