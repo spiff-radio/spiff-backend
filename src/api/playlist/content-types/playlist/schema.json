@@ -50,7 +50,8 @@
       "type": "integer"
     },
     "wp_status": {
-      "type": "string"
+      "type": "string",
+      "default": "publish"
     },
     "author": {
       "type": "relation",
@@ -72,6 +73,12 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "favoritePlaylists"
+    },
+    "favoritesFor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "favoriteTracks"
     }
   }
 }

@@ -91,7 +91,8 @@
     "favoriteTracks": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::playlist.playlist"
+      "target": "api::playlist.playlist",
+      "inversedBy": "favoritesFor"
     },
     "public": {
       "type": "boolean",
