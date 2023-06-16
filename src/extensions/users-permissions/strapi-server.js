@@ -1,55 +1,60 @@
 ("use strict");
 
+const customPolicies = require('./server/policies');
+
 module.exports = (plugin) => {
   //if you see this, the configuration do loads:
   console.log("Custom strapi-server.js for user-permissions");
 
+  //policies
+  plugin.policies = {
+    ...plugin.policies ?? {},
+    ...customPolicies
+  }
+
   //get api routes for 'user-permissions'
   const apiRoutes = plugin.routes['content-api'].routes;
 
-  //add middleware for GET /users/me
+  //update route GET /users/me
   apiRoutes
     .filter(route => route.handler === 'user.me')
     .map(route => {
-      route.config.middlewares = [
-        ...(route.config.middlewares || []),
-        'plugin::spiff-api.user-me'//middleware name
-      ];
+      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-me'];
       return route;
     });
 
-    //add middleware for GET /users/:id
+    //update route GET /users/:id
     apiRoutes
       .filter(route => route.handler === 'user.findOne')
       .map(route => {
-        route.config.middlewares = [
-          ...(route.config.middlewares || []),
-          'plugin::spiff-api.user-find-one'//middleware name
-        ];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-find-one'];
         return route;
       });
 
-    //add middleware for GET /users
+    //update route GET /users
     apiRoutes
       .filter(route => route.handler === 'user.find')
       .map(route => {
-        route.config.middlewares = [
-          ...(route.config.middlewares || []),
-          'plugin::spiff-api.user-find'//middleware name
-        ];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-find'];
         return route;
       });
 
-      //add middleware for PUT /users/:id
-      apiRoutes
-        .filter(route => route.handler === 'user.update')
-        .map(route => {
-          route.config.middlewares = [
-            ...(route.config.middlewares || []),
-            'plugin::spiff-api.user-update'
-          ];
-          return route;
-        });
+    //update route PUT /users/:id
+    apiRoutes
+      .filter(route => route.handler === 'user.update')
+      .map(route => {
+        route.config.policies = [...(route.config.policies || []), 'plugin::users-permissions.is-owner'];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-update'];
+        return route;
+      });
+
+    //update route DELETE /users/:id
+    apiRoutes
+      .filter(route => route.handler === 'user.destroy')
+      .map(route => {
+        route.config.policies = [...(route.config.policies || []), 'plugin::users-permissions.is-owner'];
+        return route;
+      });
 
     return plugin;
 
