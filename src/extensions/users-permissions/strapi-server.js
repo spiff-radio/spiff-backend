@@ -19,7 +19,7 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.me')
     .map(route => {
-      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-me'];
+      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-me'];
       return route;
     });
 
@@ -27,7 +27,7 @@ module.exports = (plugin) => {
     apiRoutes
       .filter(route => route.handler === 'user.findOne')
       .map(route => {
-        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-find-one'];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-find-one'];
         return route;
       });
 
@@ -35,7 +35,7 @@ module.exports = (plugin) => {
     apiRoutes
       .filter(route => route.handler === 'user.find')
       .map(route => {
-        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-find'];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-find'];
         return route;
       });
 
@@ -44,7 +44,7 @@ module.exports = (plugin) => {
       .filter(route => route.handler === 'user.update')
       .map(route => {
         route.config.policies = [...(route.config.policies || []), 'plugin::users-permissions.is-owner'];
-        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff-api.user-update'];
+        route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-update'];
         return route;
       });
 

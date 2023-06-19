@@ -15,10 +15,10 @@ module.exports = createCoreRouter('api::playlist.playlist', {
      policies : ['global::is-author']
    },
    find: {
-     middlewares: ['plugin::spiff-api.playlist-find']
+     middlewares: ['plugin::spiff.playlist-find']
    },
    findOne: {
-     middlewares: ['plugin::spiff-api.playlist-find-one']
+     middlewares: ['plugin::spiff.playlist-find-one']
    },
  },
 })

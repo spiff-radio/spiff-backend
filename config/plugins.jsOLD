@@ -4,8 +4,8 @@ module.exports = ({ env }) => ({
       jwtSecret: env('JWT_SECRET')
     },
   },
-  'spiff-api': {
+  'spiff': {
     enabled: true,
-    resolve: './src/plugins/spiff-api'
+    resolve: './src/plugins/spiff'
   }
 })
