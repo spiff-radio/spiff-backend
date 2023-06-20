@@ -102,7 +102,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "usersFollowing"
+      "mappedBy": "usersFollowing"
     },
     "usersFollowing": {
       "type": "relation",
