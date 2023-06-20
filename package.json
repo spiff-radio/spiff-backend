@@ -26,11 +26,11 @@
     "build-importer-assets": "node build-importers-assets.mjs"
   },
   "dependencies": {
+    "@spiff-radio/spiff-strapi-plugin": "^1.0.0",
     "@strapi/plugin-i18n": "4.11.1",
     "@strapi/plugin-users-permissions": "4.11.1",
     "@strapi/strapi": "4.11.1",
-    "pg": "^8.11.0",
-    "spiff-strapi-plugin": "file:../spiff-strapi-plugin"
+    "pg": "^8.11.0"
   },
   "strapi": {
     "uuid": "69def894-7ee8-4c0f-8ece-ccc5d5a7e065"
