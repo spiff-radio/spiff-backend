@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/spiff-radio/spiff-database.git"
+    "url": "https://github.com/spiff-radio/spiff-backend.git"
   },
   "bugs": {
-    "url": "https://github.com/spiff-radio/spiff-database/issues"
+    "url": "https://github.com/spiff-radio/spiff-backend/issues"
   },
-  "homepage": "https://github.com/spiff-radio/spiff-database#readme",
+  "homepage": "https://github.com/spiff-radio/spiff-backend#readme",
   "license": "MIT",
   "scripts": {
     "develop": "strapi develop",
