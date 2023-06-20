@@ -26,10 +26,11 @@
     "build-importer-assets": "node build-importers-assets.mjs"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.10.6",
-    "@strapi/plugin-users-permissions": "4.10.6",
-    "@strapi/strapi": "4.10.6",
+    "@strapi/plugin-i18n": "4.11.1",
+    "@strapi/plugin-users-permissions": "4.11.1",
+    "@strapi/strapi": "4.11.1",
     "better-sqlite3": "8.4.0",
+    "pg": "^8.11.0",
     "spiff-strapi-api-plugin": "file:../spiff-strapi-api-plugin"
   },
   "strapi": {
