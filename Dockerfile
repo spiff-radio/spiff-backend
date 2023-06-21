@@ -8,6 +8,10 @@ ENV NODE_ENV=production
 WORKDIR /opt/
 COPY ./package.json ./package-lock.json ./
 ENV PATH /opt/node_modules/.bin:$PATH
+
+# Copy local .nvmrc
+COPY .npmrc .
+
 # Install dependencies
 RUN npm install
 # Copy the application files

@@ -2,6 +2,7 @@
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
+#https://forum.strapi.io/t/fly-io-deployment/22438
 
 app = "spiff-backend"
 primary_region = "ams"
