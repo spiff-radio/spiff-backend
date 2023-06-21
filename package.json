@@ -1,8 +1,8 @@
 {
-  "name": "spiff-database",
+  "name": "spiff-backend",
   "private": true,
   "version": "1.0.0",
-  "description": "Spiff Database",
+  "description": "Spiff (Strapi) Backend",
   "keywords": [
     "strapi"
   ],
