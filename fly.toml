@@ -1,0 +1,14 @@
+# fly.toml app configuration file generated for spiff-backend on 2023-06-21T09:42:46+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "spiff-backend"
+primary_region = "ams"
+
+[http_service]
+  internal_port = 1337
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0

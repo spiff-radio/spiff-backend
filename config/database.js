@@ -1,4 +1,5 @@
 // strapi-api/config/database.js
+//https://forum.strapi.io/t/fly-io-deployment/22438
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
