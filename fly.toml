@@ -2,14 +2,23 @@
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
+#https://documentation-git-fork-bogdaaamn-docs-fly-deplo-460c6b-strapijs.vercel.app/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/fly.html
 #https://forum.strapi.io/t/fly-io-deployment/22438
 
 app = "spiff-backend"
 primary_region = "ams"
 
-[http_service]
-  internal_port = 1337
+[[services]]
+  internal_port = 80
+  processes = ["app"]
+  protocol = "tcp"
+  script_checks = []
+
+[[services.ports]]
+  port = 80
+  handlers = ["http"]
   force_https = true
-  auto_stop_machines = true
-  auto_start_machines = true
-  min_machines_running = 0
+
+[[services.ports]]
+  port = 443
+  handlers = ["tls", "http"]
