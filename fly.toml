@@ -23,11 +23,14 @@ primary_region = "ams"
   port = 443
   handlers = ["tls", "http"]
 
-#non-sensitive environment variables
-[env]
-  APP_URL = "https://spiff-backend.fly.dev"
-  PORT = "80" #still is defined as fly.io secret; should be checked.
-  DATABASE_HOST = "db.aljboewzouwkmsskqugr.supabase.co"
-  DATABASE_NAME="postgres"
-  DATABASE_USERNAME="postgres"
-  #DATABASE_PASSWORD as fly.io secret
+#required on build time - seems it does not work and we still have to use .env
+#NOT WORKING ?
+#[build.args]
+#  PORT="80"
+#  APP_URL="https://spiff-backend.fly.dev"
+
+#non-sensitive - seems it does not work and we still have to use .env
+#[env]
+#  DATABASE_HOST="db.aljboewzouwkmsskqugr.supabase.co"
+#  DATABASE_NAME="postgres"
+#  DATABASE_USERNAME="postgres"
