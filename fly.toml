@@ -22,3 +22,12 @@ primary_region = "ams"
 [[services.ports]]
   port = 443
   handlers = ["tls", "http"]
+
+#non-sensitive environment variables
+  [env]
+    APP_URL = "https://spiff-backend.fly.dev"
+    PORT = "80"
+    DATABASE_HOST = "db.aljboewzouwkmsskqugr.supabase.co"
+    DATABASE_NAME="postgres"
+    DATABASE_USERNAME="postgres"
+    #DATABASE_PASSWORD as fly.io secret
