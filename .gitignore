@@ -123,3 +123,8 @@ build
 src/plugins/spiff
 public/images/importers
 backups
+
+############################
+# Fly.io
+############################
+wireguard.conf

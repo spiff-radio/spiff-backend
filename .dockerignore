@@ -1,7 +1,12 @@
 # .dockerignore
-.tmp/
+#keep this for local env; for fly.io we'll use fly.toml [env] and fly secrets.
+.env
 .cache/
 .git/
+.tmp/
+backups/
 build/
 node_modules/
-data/
+
+# ignore public data ?
+public/uploadsFULL/

@@ -23,8 +23,8 @@ RUN npm install
 WORKDIR /opt/app
 COPY ./ .
 
-# Copy .env (force use .env.PROD)
-COPY .env.PROD .env
+# Copy .env (force use .env.fly)
+#COPY .env.fly .env
 
 # Build the Strapi application
 RUN npm run build
