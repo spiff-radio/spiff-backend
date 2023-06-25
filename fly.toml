@@ -24,14 +24,13 @@ primary_region = "ams"
   port = 443
   handlers = ["tls", "http"]
 
-
 #build time
 #[build.args]
 
 #runtime (non-sensitive) - fly.io secrets take precedence.
 [env]
   PORT="80"
-  APP_URL="https://spiff-backend.fly.dev:443"
+  APP_URL="https://spiff-backend.fly.dev"
 #  DATABASE_HOST="db.aljboewzouwkmsskqugr.supabase.co"
 #  DATABASE_NAME="postgres"
 #  DATABASE_USERNAME="postgres"
