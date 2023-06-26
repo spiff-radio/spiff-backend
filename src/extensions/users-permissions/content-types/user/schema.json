@@ -124,6 +124,10 @@
     "lastfm_favorite": {
       "type": "boolean",
       "default": true
+    },
+    "spotify_token": {
+      "type": "string",
+      "private": true
     }
   }
 }
