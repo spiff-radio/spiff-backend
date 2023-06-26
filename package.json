@@ -31,8 +31,7 @@
     "@strapi/plugin-users-permissions": "4.11.1",
     "@strapi/strapi": "4.11.1",
     "@strapi/utils": "^4.11.1",
-    "pg": "^8.11.0",
-    "strapi-provider-upload-supabase": "^1.0.0"
+    "pg": "^8.11.0"
   },
   "strapi": {
     "uuid": "69def894-7ee8-4c0f-8ece-ccc5d5a7e065"

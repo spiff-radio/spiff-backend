@@ -1,16 +1,6 @@
-module.exports = [
+module.exports = ({ env }) => ([
   'strapi::errors',
-  {
-    name: "strapi::security",
-    config: {
-      contentSecurityPolicy: {
-        directives: {
-          "default-src": ["'self'"],
-          "img-src": ["'self'", "data:", "blob:", 'dl.airtable.com', env("SUPABASE_API_URL")],
-        },
-      },
-    },
-  },
+  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
@@ -19,4 +9,4 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-];
+]);
