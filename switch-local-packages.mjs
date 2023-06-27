@@ -1,4 +1,5 @@
 /*
+Switch Local Packages v1.0.0
 Toggle use local or remote dependencies for '@spiff-radio/' packages.
 npm run switch-local-packages <--use remote packages
 npm run switch-local-packages local <--use local packages
