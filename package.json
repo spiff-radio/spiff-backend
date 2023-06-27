@@ -24,7 +24,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "build-importer-assets": "node build-importers-assets.mjs",
-    "switch-local-packages": "node switch-local-packages.mjs"
+    "switch-local-packages": "node ../switch-local-packages.mjs"
   },
   "dependencies": {
     "@spiff-radio/spiff-strapi-plugin": "^1.1.0",
