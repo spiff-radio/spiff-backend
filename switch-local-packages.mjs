@@ -64,7 +64,7 @@ if (!packageNames.length){
     try {
       execSync(`npm uninstall ${fullName}`);
     } catch (error) {
-      console.error(`Error uninstalling ${toLocal ? 'remote' : 'local'} package '${fullName}': ${error.message}`);
+      console.error(`Error uninstalling ${toLocal ? 'remote' : 'local'} package '${oldPath}': ${error.message}`);
     }
 
 
