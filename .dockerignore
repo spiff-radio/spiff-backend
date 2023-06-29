@@ -9,4 +9,4 @@ build/
 node_modules/
 
 # ignore public data ?
-public/uploadsFULL/
+public/uploads/
