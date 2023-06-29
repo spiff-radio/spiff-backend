@@ -14,6 +14,7 @@ module.exports = ({ env }) => ({
         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),// For self-signed certificates
       },
     },
-    debug: false,
+    pool: { min: 0 }, //https://community.fly.io/t/random-502-bad-gateway-errors-with-strapi-endpoints-app-deployed-on-fly-io-postgres-database-on-supabase/13791/2
+    debug: false
   },
 });
