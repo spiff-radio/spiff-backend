@@ -125,8 +125,16 @@
       "type": "boolean",
       "default": true
     },
-    "spotify_token": {
-      "type": "string",
+    "spotify_access_token": {
+      "type": "text",
+      "private": true
+    },
+    "spotify_refresh_token": {
+      "type": "text",
+      "private": true
+    },
+    "spotify_access_token_expiration": {
+      "type": "datetime",
       "private": true
     }
   }
