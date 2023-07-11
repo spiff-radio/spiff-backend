@@ -24,7 +24,14 @@ module.exports = ({ env }) => ([
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      header: '*',
+      origin: ['http://localhost:3000','https://www.spiff-radio.org']
+    }
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
