@@ -27,9 +27,14 @@ module.exports = ({ env }) => ([
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       header: '*',
-      origin: ['http://localhost:3000','https://www.spiff-radio.org']
+      origin: [
+        //TOUFIX TOUCHECK is this secure ?
+        'http://localhost:3000',//dev frontend
+        'http://localhost:1337',//dev backend
+        'https://www.spiff-radio.org',//prod frontend
+        'https://spiff-backend.fly.dev'//prod backend
+      ]
     }
   },
   'strapi::poweredBy',
