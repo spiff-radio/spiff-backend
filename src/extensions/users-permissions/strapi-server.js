@@ -19,7 +19,13 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.me')
     .map(route => {
-      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-me'];
+      route.config.middlewares = [
+        ...(route.config.middlewares || []),
+        'plugin::spiff.user-private-email',
+        'plugin::spiff.user-private-lastfm',
+        'plugin::spiff.user-private-spotify',
+        'plugin::spiff.user-profile'
+      ];
       return route;
     });
 
@@ -27,7 +33,13 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.findOne')
     .map(route => {
-      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-find-one'];
+      route.config.middlewares = [
+        ...(route.config.middlewares || []),
+        'plugin::spiff.user-private-email',
+        'plugin::spiff.user-private-lastfm',
+        'plugin::spiff.user-private-spotify',
+        'plugin::spiff.user-profile'
+      ];
       return route;
     });
 
@@ -35,7 +47,13 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.find')
     .map(route => {
-      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-find'];
+      route.config.middlewares = [
+        ...(route.config.middlewares || []),
+        'plugin::spiff.user-private-email',
+        'plugin::spiff.user-private-lastfm',
+        'plugin::spiff.user-private-spotify',
+        'plugin::spiff.user-profile'
+      ];
       return route;
     });
 
@@ -43,8 +61,14 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.update')
     .map(route => {
-      route.config.policies = [...(route.config.policies || []), 'plugin::users-permissions.is-owner'];
-      route.config.middlewares = [...(route.config.middlewares || []), 'plugin::spiff.user-update'];
+      route.config.policies = [
+        ...(route.config.policies || []),
+        'plugin::users-permissions.is-owner'
+      ];
+      route.config.middlewares = [
+        ...(route.config.middlewares || []),
+        'plugin::spiff.user-update'
+      ];
       return route;
     });
 
@@ -52,7 +76,10 @@ module.exports = (plugin) => {
   apiRoutes
     .filter(route => route.handler === 'user.destroy')
     .map(route => {
-      route.config.policies = [...(route.config.policies || []), 'plugin::users-permissions.is-owner'];
+      route.config.policies = [
+        ...(route.config.policies || []),
+        'plugin::users-permissions.is-owner'
+      ];
       return route;
     });
 
